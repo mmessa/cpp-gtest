@@ -29,19 +29,40 @@ TEST(RandoTest, allChildrenSmile)
 	ASSERT_TRUE( rando.shouldWorry(true,true,true) );
 }
 
+
+// TESTS FOR isDivisbleBy
 TEST(RandoTest, isDivisbleByTrue)
 {
 	Rando rando;
 	ASSERT_TRUE ( rando.isDivisbleBy(4,2) );
+	ASSERT_TRUE ( rando.isDivisbleBy(10,2) );
+}
+
+TEST(RandoTest, isDivisbleByZeroTrue)
+{
+	Rando rando;
+	ASSERT_TRUE ( rando.isDivisbleBy(0,2) );
+	ASSERT_TRUE ( rando.isDivisbleBy(0,5) );
 }
 
 TEST(RandoTest, isDivisbleByFalse)
 {
 	Rando rando;
 	ASSERT_FALSE ( rando.isDivisbleBy(5,2) );
+	ASSERT_FALSE ( rando.isDivisbleBy(10,3) );
 }
 
 
+TEST(RandoTest, isDivisbleByZeroFalse)
+{
+	Rando rando;
+	ASSERT_FALSE ( rando.isDivisbleBy(5,0) );
+	ASSERT_FALSE ( rando.isDivisbleBy(10,0) );
+}
+
+
+
+//TESTS FOR isPrime
 TEST(RandoTest, isPrimeFalse)
 {
 	Rando rando;
