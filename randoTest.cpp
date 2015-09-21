@@ -42,5 +42,15 @@ TEST(RandoTest, isDivisbleByFalse)
 }
 
 
+TEST(RandoTest, isPrimeFalse)
+{
+	Rando rando;
+	ASSERT_FALSE ( rando.isPrime(4) );
+}
 
 
+TEST(RandoTest, isPrimeTrue)
+{
+	Rando rando;
+	ASSERT_TRUE ( rando.isPrime(7) );
+}
