@@ -58,12 +58,18 @@ TEST(RandoTest, isDivisbleByZeroFalse)
 
 
 //TESTS FOR isPrime
+TEST(RandoTest, isPrimeFalseZero)
+{
+	Rando rando;
+	ASSERT_FALSE ( rando.isPrime(0) );
+}
+
+
 TEST(RandoTest, isPrimeFalse)
 {
 	Rando rando;
-	ASSERT_FALSE ( rando.isPrime(4) );
+	ASSERT_FALSE ( rando.isPrime(666666) );
 }
-
 
 TEST(RandoTest, isPrimeTrue)
 {
