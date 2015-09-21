@@ -38,13 +38,6 @@ TEST(RandoTest, isDivisbleByTrue)
 	ASSERT_TRUE ( rando.isDivisbleBy(10,2) );
 }
 
-TEST(RandoTest, isDivisbleByZeroTrue)
-{
-	Rando rando;
-	ASSERT_TRUE ( rando.isDivisbleBy(0,2) );
-	ASSERT_TRUE ( rando.isDivisbleBy(0,5) );
-}
-
 TEST(RandoTest, isDivisbleByFalse)
 {
 	Rando rando;
@@ -58,6 +51,8 @@ TEST(RandoTest, isDivisbleByZeroFalse)
 	Rando rando;
 	ASSERT_FALSE ( rando.isDivisbleBy(5,0) );
 	ASSERT_FALSE ( rando.isDivisbleBy(10,0) );
+	ASSERT_FALSE ( rando.isDivisbleBy(0,2) );
+	ASSERT_FALSE ( rando.isDivisbleBy(0,5) );
 }
 
 
