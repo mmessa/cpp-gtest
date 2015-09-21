@@ -1,10 +1,10 @@
-# Building GoogleTest and running exercise-gtest unit tests against
+#Building GoogleTest and running exercise-gtest unit tests against
 # all code in SOURCECODE subdirectory. This Makefile is based on the
 # sample Makefile provided in the official GoogleTest GitHub Repo v1.7
 
 # Points to the root of Google Test. Change it to reflect where your
 # clone of the googletest repo is
-GTEST_DIR = /usr/local/include/gtest
+GTEST_DIR = /Users/mattmessa/Documents/chicoState/Senior_2015_2016/softwareEngineering/googletest/googletest
 
 # Flags passed to the preprocessor and compiler
 CPPFLAGS += -isystem $(GTEST_DIR)/include
@@ -49,5 +49,5 @@ RandoTest.o : randoTest.cpp \
                      rando.h $(GTEST_HEADERS)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c RandoTest.cpp
 
-RandoTest : rando.o RandoTest.o gtest_main.a
+RandoTest : rando.o randoTest.o gtest_main.a
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -lpthread $^ -o $@
